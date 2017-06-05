@@ -276,6 +276,7 @@ var PanManager = BaseObject.extend({
 
         $('.editor-pan-edit-text textarea').val(item.title);
 
+        $(".editor-pan-edit-text textarea").unbind("input paste");
         $('.editor-pan-edit-text textarea').bind("input paste", function () {
             item.setText($(this).val())
         });
